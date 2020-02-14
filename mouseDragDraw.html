@@ -18,6 +18,8 @@
 
 <P>Click the mouse on the canvas</P>
 <canvas id="canvas" height="400" width="400"></canvas>
+<br>
+<button id='clear'>Clear</button>
 
 <script>
 
@@ -47,9 +49,14 @@
     //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
     //context.fillRect(x-5, y-5, 10, 10);
     context.beginPath()
-    context.arc(x-5, y-5, 3, 0, 6.3)
+    context.arc(x, y, 3, 0, 6.3)
     context.fill()
 
+  })
+
+  let clear = document.querySelector('#clear')
+  clear.addEventListener(function() {
+    canvas.
   })
 
 </script>
