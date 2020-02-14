@@ -2,6 +2,7 @@
 <html>
 
     <head>
+        <title>Hello Canvas</title>
 
         <!--metadata e.g. links to stylesheets here-->
 
@@ -9,8 +10,30 @@
 
     <body>
 
-        <!--document content-->
+        <canvas id="canvas" height="500" width="500"></canvas>
+        
+        <script>
+            let canvas = document.querySelector('#canvas')
+            let context = canvas.getContext('2d')
 
+            context.fillRect(50, 75, 100, 100)
+            context.fillStyle = 'red'
+            context.fillRect(200, 100, 100, 50)
+            context.strokeRect(200, 100, 100, 50)
+
+            context.strokeRect(250, 50, 50, 50)
+
+            // drawing a circle
+            context.beginPath()
+            context.arc(300, 300, 200, 0, 6.3)
+            // outline circle
+            context.stroke()
+            // fill in circle
+            context.fillStyle = 'blue'
+            context.fill()
+
+        </script>
+            
     </body>
 
 </html>
